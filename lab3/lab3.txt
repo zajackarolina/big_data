@@ -1,0 +1,8 @@
+Spark UI
+dashbord
+stages
+job
+tasks
+enviroment
+sql
+stages summary
