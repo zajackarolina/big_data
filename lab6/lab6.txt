@@ -1,0 +1,33 @@
+Tutuł: działanie systemów analitycznych i AI w chmurze
+Azure Synapse Analytics – hurtownia danych do analityki w czasie rzeczywistym, łączy dane z wielu źródeł.
+
+Azure Data Factory – orkiestracja i przetwarzanie danych (ETL/ELT).
+
+Azure Machine Learning – budowa, trenowanie i wdrażanie modeli AI.
+
+Azure Databricks – platforma analityczna oparta na Apache Spark, idealna do Big Data i Data Science.
+
+Azure IoT Hub – zbieranie danych z urządzeń IoT.
+
+Azure Stream Analytics – analiza danych strumieniowych w czasie rzeczywistym.
+
+Azure Monitor + Application Insights – monitorowanie wydajności aplikacji, błędów i logów.
+
+Azure Data Lake Storage Gen2 – skalowalne przechowywanie danych Big Data.
+Azure Logic Apps to usługa do automatyzowania przepływów pracy (workflow) – czyli wykonywania zadań bez pisania kodu.np. wywyslania alertu jak wykryje anomalie
+
+
+1.
+1.Azure IoT Hub – zbieranie danych z czujników.
+
+2.Azure Stream Analytics – wstępne filtrowanie/analityka w czasie rzeczywistym.
+
+3.Azure Data Lake – magazyn danych historycznych.
+
+4.Azure Machine Learning – model wykrywania anomalii (np. Isolation Forest, Autoencoder).
+
+5.Power BI – wizualizacja wyników.
+1->2->3
+    2->4->5
+2.
+User->Event Hub->Stream Analytics->Data Lake & ->ML -> Synapse Analysis -> Dashboard/Power BI -> Alert przez Azure Logic Apps
