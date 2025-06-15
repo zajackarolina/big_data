@@ -1,0 +1,59 @@
+Zbyt sztywna struktura trójwarstwowa
+Narzuca podział na Bronze–Silver–Gold, nawet jeśli prostsze podejście byłoby wystarczające.
+
+Powielanie danych (redundancja)
+Te same dane są składowane w wielu warstwach, co zwiększa koszty storage i zarządzania.
+
+Opóźnienie dostępu do danych
+Dane użytkownika końcowego trafiają do warstwy Gold z dużym opóźnieniem po przetworzeniu w Bronze i Silver.
+
+Złożoność utrzymania pipeline’ów
+Każda warstwa wymaga osobnych jobów ETL/ELT, co zwiększa liczbę zależności i punktów awarii.
+
+Niewystarczająca elastyczność
+Architektura jest trudna do dostosowania w przypadku szybko zmieniających się wymagań analitycznych.
+
+Sztuczne rozdzielenie przetwarzania
+Czasami podział danych na warstwy nie odpowiada rzeczywistym potrzebom biznesowym.
+
+Zduplikowana logika przetwarzania
+Często podobne reguły są powielane w wielu warstwach, co prowadzi do niespójności.
+
+Problemy z wersjonowaniem danych
+Trudno śledzić zmiany w danych między warstwami bez dedykowanego versionowania.
+
+Kosztowna kontrola jakości
+Walidacja danych musi być wykonywana wielokrotnie – w każdej warstwie osobno.
+
+Utrudnione zarządzanie zmianą schematu
+Zmiana w schemacie danych źródłowych może wymagać zmian w każdej warstwie.
+
+Złożoność debugowania błędów
+Trzeba analizować każdą warstwę osobno, by znaleźć źródło problemu.
+
+Potencjalne rozbieżności między warstwami
+Jeśli procesy są uruchamiane niezależnie, mogą wystąpić niespójności między Silver i Gold.
+
+Trudna automatyzacja i CI/CD
+Pipeline’y muszą być spójnie wersjonowane i wdrażane – co jest trudne przy 3+ warstwach.
+
+Zbyt mała reużywalność danych
+Każda warstwa jest projektowana pod konkretne przypadki użycia, co utrudnia elastyczne wykorzystanie danych.
+
+Nieefektywna aktualizacja danych (late arriving data)
+Ponowne przetwarzanie Bronze–Silver–Gold może być kosztowne w przypadku opóźnionych danych.
+
+Duża zależność od narzędzi ETL/ELT
+Architektura często wymaga złożonych harmonogramów i silników transformacji.
+
+Nadmiar dokumentacji i metadata
+Każda warstwa wymaga osobnego katalogowania, opisu, definicji danych.
+
+Trudności w dostępie ad-hoc
+Dla użytkowników biznesowych warstwa Bronze i Silver są często nieprzydatne lub ukryte.
+
+Nadmierna abstrakcja może ukrywać błędy
+Ukrycie danych źródłowych i przekształceń może prowadzić do trudniejszych analiz korelacji błędów.
+
+Nie zawsze wspiera podejście Data Mesh
+Architektura nie sprzyja rozproszonemu ownershipowi domen danych – często centralizuje odpowiedzialność.

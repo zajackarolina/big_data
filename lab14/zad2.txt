@@ -1,0 +1,8 @@
+| Kryterium / Scenariusz                              | Delta Lake                              | Iceberg                             |
+| --------------------------------------------------- | --------------------------------------- | ----------------------------------- |
+| Główna platforma to **Databricks**                  |  Najlepszy wybór                       |  Możliwy, ale mniej naturalny     |
+| **Wiele silników analitycznych** (np. Trino, Flink) |  Ograniczone wsparcie                 |  Silna strona Iceberg              |
+| **Intensywne operacje update/merge/delete**         |  Bardzo dobra obsługa                  | Obsługa zależna od implementacji |
+| **Złożone zarządzanie partycjami**                  |  Może wymagać optymalizacji manualnej |  Bardzo dobra wydajność            |
+| **Time Travel i wersjonowanie**                     |  Wbudowane                             | Wbudowane                         |
+| **Pełna integracja z ML i AutoML**                  |  Wspierane natywnie                    | Brak bezpośredniej integracji     |
